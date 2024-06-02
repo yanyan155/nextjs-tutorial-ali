@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+# https://medium.com/@thenarcissistcoder/setting-up-husky-and-pre-commit-hooks-in-your-typescript-project-with-eslint-and-prettier-ce960c84b4d9
+. "$(dirname -- "$0")/_/husky.sh"
+
+npx lint-staged

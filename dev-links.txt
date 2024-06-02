@@ -1,0 +1,10 @@
+course:
+https://www.youtube.com/watch?v=KjY94sAKLlw&ab_channel=freeCodeCamp.org
+
+
+precommit-hook
+https://medium.com/@thenarcissistcoder/setting-up-husky-and-pre-commit-hooks-in-your-typescript-project-with-eslint-and-prettier-ce960c84b4d9
+
+https://juliangaramendy.dev/blog/prettier-pre-commit-hook
+
+https://dev.to/samueldjones/run-a-typescript-type-check-in-your-pre-commit-hook-using-lint-staged-husky-30id
