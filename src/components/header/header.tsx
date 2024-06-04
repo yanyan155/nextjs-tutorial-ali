@@ -4,9 +4,9 @@ import Image from 'next/image';
 
 export const Header = () => {
   return (
-    <header>
-      <div>
-        <div className="topNav">
+    <header className="h-72 px-8 py-4 bg-gradient-to-r from-cyan-50 to-cyan-200">
+      <div className="h-full max-w-7xl mx-auto my-0 flex flex-col justify-around">
+        <div className="topNav flex justify-between">
           <Image
             alt="logo"
             src={'/images/logo_black.png'}
@@ -14,7 +14,7 @@ export const Header = () => {
             height={50}
           />
           <nav>
-            <ul>
+            <ul className="flex gap-4 font-semibold text-base">
               <li>
                 <Link href="/" passHref>
                   <a> Home</a>
@@ -33,7 +33,7 @@ export const Header = () => {
             </ul>
           </nav>
         </div>
-        <p className="title"> Sed ut perspiciatis unde omnis</p>
+        <p className="uppercase text-4xl">Sed ut perspiciatis unde omnis</p>
       </div>
     </header>
   );

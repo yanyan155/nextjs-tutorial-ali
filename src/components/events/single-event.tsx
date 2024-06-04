@@ -46,19 +46,27 @@ const SingleEvent = ({ data }: IProps) => {
   };
 
   return (
-    <div className="event_single_page">
+    <div>
       <h1> {data.title} </h1>
       <Image src={data.image} width={1000} height={500} alt={data.title} />
       <p> {data.description} </p>
-      <form onSubmit={onSubmit} className="email_registration">
-        <label> Get Registered for this event!</label>
+      <form onSubmit={onSubmit} className="mt-7">
+        <label className="flex mt-7 mb-4 uppercase text-lg font-extrabold">
+          Get Registered for this event!
+        </label>
         <input
           ref={inputEmail}
           type="email"
           id="email"
           placeholder="Please insert your email here"
+          className="h-10 min-w-80 rounded border-1 border-solid border-slate-200 text-base pl-1"
         />
-        <button type="submit"> Submit</button>
+        <button
+          className="h-10 min-w-36 rounded border-1 border-solid border-emerald-700 text-lg uppercase ml-3 font-bold cursor-pointer bg-teal-200 hover:bg-teal-200 hover:text-slate-800"
+          type="submit"
+        >
+          Submit
+        </button>
       </form>
       <p>{message}</p>
     </div>

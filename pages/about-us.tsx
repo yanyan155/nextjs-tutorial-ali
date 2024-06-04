@@ -24,7 +24,7 @@ const AboutUsPage: NextPage = () => {
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum.
       </p>
-      <ul className="about_us_list">
+      <ul className="flex flex-col">
         <li>
           <h3>Dlor in reprehenderit </h3>
           <p>

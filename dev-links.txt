@@ -8,3 +8,9 @@ https://medium.com/@thenarcissistcoder/setting-up-husky-and-pre-commit-hooks-in-
 https://juliangaramendy.dev/blog/prettier-pre-commit-hook
 
 https://dev.to/samueldjones/run-a-typescript-type-check-in-your-pre-commit-hook-using-lint-staged-husky-30id
+
+// how to work with sessions
+// TODO: https://clerk.com/blog/complete-guide-session-management-nextjs
+
+// tailwind
+/* https://nextjs.org/docs/app/building-your-application/styling/tailwind-css  */

@@ -9,15 +9,18 @@ interface IProps {
 }
 
 export const HomePage = ({ data }: IProps) => (
-  <div className="home_body">
+  <div className="flex flex-col gap-12">
     <RandomPicture></RandomPicture>
     {data?.map(ev => (
       <Link key={ev.id} href={`/events/${ev.id}`} passHref>
-        <a className="card" href={`/events/${ev.id}`}>
-          <div className="image">
+        <a
+          className="flex flex-row gap-8 justify-center content-center items-center even:flex-row-reverse"
+          href={`/events/${ev.id}`}
+        >
+          <div className="w-2/5">
             <Image width={600} height={400} alt={ev.title} src={ev.image} />
           </div>
-          <div className="content">
+          <div className="w-1/2">
             <h2> {ev.title} </h2>
             <p> {ev.description} </p>
           </div>
@@ -26,5 +29,3 @@ export const HomePage = ({ data }: IProps) => (
     ))}
   </div>
 );
-// how to work with sessions
-// TODO: https://clerk.com/blog/complete-guide-session-management-nextjs

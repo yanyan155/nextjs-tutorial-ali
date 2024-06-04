@@ -13,13 +13,12 @@ interface IProps {
 }
 
 const CatEvent = ({ data, pageName }: IProps) => {
-  // https://nextjs.org/docs/pages/api-reference/functions/use-router
   const router = useRouter();
   const redirectToHome = () => {
     router.push('/');
   };
   return (
-    <div className="cat_events">
+    <div className="w-full">
       <h1> Events in {pageName} </h1>
       <RandomPicture></RandomPicture>
       <button
@@ -29,10 +28,10 @@ const CatEvent = ({ data, pageName }: IProps) => {
       >
         redirectToHome
       </button>
-      <div className="content">
+      <div className="flex flex-row flex-wrap justify-start gap-8 w-full">
         {data.map((ev: OneEvent) => (
           <Link key={ev.id} href={`/events/${ev.city}/${ev.id}`} passHref>
-            <a className="card">
+            <a className="flex flex-col w-1/3">
               <Image width={300} height={300} alt={ev.title} src={ev.image} />
               <h2> {ev.title} </h2>
               <p> {ev.description} </p>
