@@ -1,0 +1,11 @@
+deploy on versel (see course)
+add i18N
+
+logo as a link to home page
+add responive design
+add HEAD to each page
+add specific metadata to each page
+Main layout: how to put to a page specific title throw a props
+add auth (+ session managing for users)
+exact event page: add likes - comments - prices part
+? add categories for events: per christmas, per season
