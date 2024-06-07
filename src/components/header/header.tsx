@@ -2,7 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-export const Header = () => {
+interface Iprops {
+  h1text: string;
+}
+
+export const Header = ({ h1text }: Iprops) => {
   return (
     <header className="h-72 px-8 py-4 bg-gradient-to-r from-cyan-50 to-cyan-200">
       <div className="h-full max-w-7xl mx-auto my-0 flex flex-col justify-around">
@@ -33,7 +37,7 @@ export const Header = () => {
             </ul>
           </nav>
         </div>
-        <p className="uppercase text-4xl">Sed ut perspiciatis unde omnis</p>
+        <p className="uppercase text-4xl">{h1text}</p>
       </div>
     </header>
   );

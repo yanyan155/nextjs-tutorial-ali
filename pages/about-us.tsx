@@ -1,6 +1,10 @@
 import React from 'react';
-import type { NextPage } from 'next';
+import type { NextPage, GetStaticProps, GetStaticPropsResult } from 'next';
 import Head from 'next/head';
+
+interface IProps {
+  h1text: string;
+}
 
 const AboutUsPage: NextPage = () => {
   return (
@@ -59,3 +63,10 @@ const AboutUsPage: NextPage = () => {
 };
 
 export default AboutUsPage;
+
+export const getStaticProps: GetStaticProps<IProps> =
+  function (): GetStaticPropsResult<IProps> {
+    return {
+      props: { h1text: 'Who are we?' }
+    };
+  };

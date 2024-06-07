@@ -10,6 +10,7 @@ import { ServerData, EventsCategories } from '../types';
 
 interface Iprops {
   data: EventsCategories;
+  h1text: string;
 }
 
 const Home: NextPage<Iprops> = ({ data }: Iprops) => {
@@ -37,7 +38,8 @@ export const getServerSideProps: GetServerSideProps<Iprops> =
     const { events_categories } = await fetchData();
     return {
       props: {
-        data: events_categories
+        data: events_categories,
+        h1text: 'Welcome to the events calendar'
       }
     };
   };

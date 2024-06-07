@@ -6,6 +6,7 @@ import Head from 'next/head';
 
 interface IProps {
   data: OneEvent;
+  h1text: string;
 }
 const EventPage: NextPage<IProps> = ({ data }: IProps) => {
   return (
@@ -53,6 +54,9 @@ export const getStaticProps: GetStaticProps<IProps, ParsedPageId> =
     const eventData = allEvents.find((ev: OneEvent) => id === ev.id);
 
     return {
-      props: { data: eventData }
+      props: {
+        data: eventData,
+        h1text: `Find details for "${eventData.title}" event`
+      }
     };
   };

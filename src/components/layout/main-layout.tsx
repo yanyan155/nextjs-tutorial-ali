@@ -5,9 +5,11 @@ import { Header } from '../header/header';
 
 interface IProps {
   children: ReactNode;
+  h1text: string;
 }
 
-const MainLayout = ({ children }: IProps) => {
+const MainLayout = ({ children, h1text }: IProps) => {
+  console.log(h1text);
   return (
     <>
       <Head>
@@ -18,7 +20,7 @@ const MainLayout = ({ children }: IProps) => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
+      <Header h1text={h1text} />
       <main className="w-full max-w-7xl mx-auto my-0 py-7 px-20 min-h-96">
         {children}
       </main>

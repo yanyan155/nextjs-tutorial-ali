@@ -18,6 +18,7 @@ import {
 interface IProps {
   data: AllEvents;
   pageName: string;
+  h1text: string;
 }
 
 const EventsCatPage: NextPage<IProps> = ({ data, pageName }: IProps) => {
@@ -67,7 +68,14 @@ export const getStaticProps: GetStaticProps<IProps, ParsedPageCat> =
     const data = allEvents.filter((ev: OneEvent) => ev.city === id);
     // https://nextjs.org/docs/pages/building-your-application/data-fetching/incremental-static-regeneration
     // revalidate: Incremental Static Regeneration
-    return { props: { data, pageName: id }, revalidate: 30 };
+    return {
+      props: {
+        data,
+        pageName: id,
+        h1text: `Find all events for ${data[0].city}`
+      },
+      revalidate: 30
+    };
   };
 
 // HOW TO DEBUG

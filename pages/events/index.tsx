@@ -6,6 +6,7 @@ import Head from 'next/head';
 
 interface IProps {
   data: EventsCategories;
+  h1text: string;
 }
 const EventsPage = ({ data }: IProps) => {
   return (
@@ -30,7 +31,8 @@ export const getStaticProps: GetStaticProps<IProps> =
     const { events_categories } = await import('/data/data.json');
     return {
       props: {
-        data: events_categories
+        data: events_categories,
+        h1text: 'Find all cities with events'
       }
     };
   };
