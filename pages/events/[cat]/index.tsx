@@ -6,6 +6,7 @@ import type {
   GetStaticPropsResult,
   NextPage
 } from 'next';
+import Head from 'next/head';
 
 import {
   AllEvents,
@@ -20,7 +21,16 @@ interface IProps {
 }
 
 const EventsCatPage: NextPage<IProps> = ({ data, pageName }: IProps) => {
-  return <CatEvent data={data} pageName={pageName} />;
+  const descrContent = `Advertisement company with detailed information about upcoming events | Events in ${pageName} page`;
+  return (
+    <>
+      <Head>
+        <title>Events app | Events in {pageName} page</title>
+        <meta name="description" content={descrContent} />
+      </Head>
+      <CatEvent data={data} pageName={pageName} />
+    </>
+  );
 };
 
 export default EventsCatPage;

@@ -2,13 +2,22 @@ import React from 'react';
 import SingleEvent from '../../../src/components/events/single-event';
 import type { GetStaticProps, GetStaticPropsResult, NextPage } from 'next';
 import { ServerData, OneEvent, ParsedPageId } from '../../../types';
+import Head from 'next/head';
 
 interface IProps {
   data: OneEvent;
 }
-const EventPage: NextPage<IProps> = ({ data }: IProps) => (
-  <SingleEvent data={data} />
-);
+const EventPage: NextPage<IProps> = ({ data }: IProps) => {
+  return (
+    <>
+      <SingleEvent data={data} />
+      <Head>
+        <title>Events app | {data.title} page</title>
+        <meta name="description" content={data.description} />
+      </Head>
+    </>
+  );
+};
 
 export default EventPage;
 

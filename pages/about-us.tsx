@@ -1,9 +1,17 @@
 import React from 'react';
 import type { NextPage } from 'next';
+import Head from 'next/head';
 
 const AboutUsPage: NextPage = () => {
   return (
     <div>
+      <Head>
+        <title>Events app | About Us Page</title>
+        <meta
+          name="description"
+          content="Advertisement company with detailed information about upcoming events | About Us"
+        />
+      </Head>
       <h1> About us Page</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod

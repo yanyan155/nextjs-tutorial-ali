@@ -2,12 +2,24 @@ import React from 'react';
 import AllEventsComponent from '../../src/components/events/events-page';
 import { EventsCategories } from '../../types';
 import { GetStaticProps, GetStaticPropsResult } from 'next';
+import Head from 'next/head';
 
 interface IProps {
   data: EventsCategories;
 }
 const EventsPage = ({ data }: IProps) => {
-  return <AllEventsComponent data={data} />;
+  return (
+    <>
+      <Head>
+        <title>Events app | Events page</title>
+        <meta
+          name="description"
+          content="Advertisement company with detailed information about upcoming events | Events page"
+        />
+      </Head>
+      <AllEventsComponent data={data} />
+    </>
+  );
 };
 
 export default EventsPage;
